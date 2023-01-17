@@ -1,3 +1,11 @@
+
+:root {
+  --clr-white: #FFFFFF;
+  --clr-black: #202020;
+  --clr-gray: #c4c4c4;
+  --clr-gray-2: #8f8f8f;
+}
+
 body {
   font-family: sans-serif;
 }

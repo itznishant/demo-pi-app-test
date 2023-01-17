@@ -3,6 +3,7 @@ import axios from 'axios';
 import ProductCard from './components/ProductCard';
 import SignIn from './components/SignIn';
 import Header from './components/Header';
+// import testpic from './assets/abstract_logo.png';
 
 type MyPaymentMetadata = {};
 
@@ -42,7 +43,8 @@ interface PaymentDTO {
 interface WindowWithEnv extends Window {
   __ENV?: {
     backendURL: string, // REACT_APP_BACKEND_URL environment variable
-    sandbox: "true" | "false", // REACT_APP_SANDBOX_SDK environment variable - string, not boolean!
+    sandbox: "true" 
+    // | "false", // REACT_APP_SANDBOX_SDK environment variable - string, not boolean!
   }
 }
 
@@ -130,20 +132,22 @@ export default function Shop() {
       <Header user={user} onSignIn={signIn} onSignOut={signOut}/>
 
       <ProductCard
-        name="Apple Pie"
-        description="You know what this is. Pie. Apples. Apple pie."
-        price={3}
-        pictureURL="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Apple_pie.jpg/1280px-Apple_pie.jpg"
+        name="Example Domain 1A"
+        description="You know what this is. Example Domain 1A"
+        price={1}
+        // picture={testpic}
+        // pictureURL="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Apple_pie.jpg/1280px-Apple_pie.jpg"
         pictureCaption="Picture by Dan Parsons - https://www.flickr.com/photos/dan90266/42759561/, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=323125"
-        onClickBuy={() => orderProduct("Order Apple Pie", 3, { productId: 'apple_pie_1' })}
+        onClickBuy={() => orderProduct("Order domain 1a", 1, { productId: 'domain_1a' })}
       />
       <ProductCard
-        name="Lemon Meringue Pie"
-        description="Non-contractual picture. We might have used oranges because we had no lemons. Order at your own risk."
-        price={5}
-        pictureURL="https://live.staticflickr.com/1156/5134246283_f2686ff8a8_b.jpg"
+        name="Example Domain 2B"
+        description="You know what this is. Example Domain 2B"
+        price={2}
+        // picture={testpic}
+        // pictureURL="https://live.staticflickr.com/1156/5134246283_f2686ff8a8_b.jpg"
         pictureCaption="Picture by Sistak - https://www.flickr.com/photos/94801434@N00/5134246283, CC BY-SA 2.0"
-        onClickBuy={() => orderProduct("Order Lemon Meringue Pie", 5, { productId: 'lemon_pie_1' })}
+        onClickBuy={() => orderProduct("Order domain 2b", 2, { productId: 'domain_2b' })}
       />
 
       { showModal && <SignIn onSignIn={signIn} onModalClose={onModalClose} /> }

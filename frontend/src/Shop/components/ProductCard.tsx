@@ -1,11 +1,13 @@
 import React from 'react';
+import testpic from '../assets/abstract_logo.png';
 
 interface Props {
   name: string,
   description: string,
   price: number,
+  // picture: string,
   pictureCaption: string,
-  pictureURL: string,
+  // pictureURL: string,
   onClickBuy: () => void,
 }
 
@@ -14,12 +16,12 @@ export default function ProductCard(props: Props) {
     <div style={{ margin: 16, paddingBottom: 16, borderBottom: '1px solid gray' }}>
       <div style={{ display: 'flex', flexDirection: 'row' }}>
         <div style={{ width: "33%", marginRight: 8 }}>
-          <img style={{ width: "100%" }} src={props.pictureURL} alt={props.name} />
+          <img style={{ width: "100%" }} src={testpic} alt={props.name} />
         </div>
 
         <div style={{ width: "66%" }}>
           <h3>{props.name}</h3>
-          <p>{props.description}</p>          
+          {/*<p>{props.description}</p>          */}
         </div>
       </div>
 
@@ -28,7 +30,7 @@ export default function ProductCard(props: Props) {
         <button onClick={props.onClickBuy}>Order</button>
       </div>
 
-      <span style={{fontSize: '0.6em'}}>{props.pictureCaption}</span>
+      {/*<span style={{fontSize: '0.6em'}}>{props.pictureCaption}</span>*/}
     </div>
   )
 }

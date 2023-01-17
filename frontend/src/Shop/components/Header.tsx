@@ -9,8 +9,8 @@ interface Props {
 
 const headerStyle: CSSProperties = {
   padding: 8,
-  backgroundColor: "gray",
-  color: "white",
+  backgroundColor: '#202020',
+  color: '#FFFFFF',
   width: "100%",
   display: "flex",
   alignItems: "center",
@@ -20,7 +20,7 @@ const headerStyle: CSSProperties = {
 export default function Header(props: Props) {
   return (
     <header style={headerStyle}>
-      <div style={{ fontWeight: "bold" }}>Pi Bakery</div>
+      <div style={{ fontWeight: "bold" }}>Domains for Pi !</div>
 
       <div>
         {props.user === null ? (
